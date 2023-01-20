@@ -192,10 +192,12 @@ public class Holamundo {
 		}
 	
 	public static void ejercicio7() {
-//		char b = 'b';
-//		char k = 'k';
-//		System.out.println(b +" tiene la posición " + charCodeAt('b')); //falta saber la funcion para convertir a ASCII
-//		System.out.println(k + " tiene la posicion " + charCodeAt(k));
+		char letra1 = 'b';
+		char letra2 = 'k';
+		System.out.println("'b' + tiene la posición " + (int)letra1); //falta saber la funcion para convertir a ASCII
+		System.out.println("'k' +  tiene la posicion " + (int)letra2);
+		System.out.println();
+		
 	}
 	
 	public static void ejemplosSaltos() {
@@ -301,11 +303,6 @@ public class Holamundo {
 			System.out.printf("%-15s%12.2f%12s\n", nombre2, precio2, precio2*(1+IVA));
 			System.out.printf("%-15s%12.2f%12s\n", nombre3, precio3, precio3*(1+IVA));
 			sc.close();
-			
-			
-			
-			
-			
 		}
 	public static void tablasVerdad() {
 		//Ejemplo copiado del PDF
@@ -334,11 +331,11 @@ public class Holamundo {
 //		ejemplosConstantes();
 //		conversionesNumerosCadenas();
 //		ejercicio6();
-//		ejercicio7();
+		ejercicio7();
 //		ejemplosSaltos();
 //		ejemplosFormateos();
 //		ejemplosScanner();
-		ejercicio15();
+//		ejercicio15();
 	}
 
 }
