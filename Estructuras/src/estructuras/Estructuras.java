@@ -1,5 +1,9 @@
 package estructuras;
 
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Scanner;
 
 public class Estructuras {
@@ -122,13 +126,156 @@ public class Estructuras {
 		System.out.println("Bienvenido al chirincirco de jugones");
 		sc.close();
 	}
+	 public static void ejemploWhile1() {
+		 Scanner sc = new Scanner(System.in);
+		 String password = "1234";
+		 boolean adivina = false;
+		 while(adivina==false) {
+			 System.out.println("Introduzca la contraseña");
+			 String respuesta = sc.nextLine();
+			 if(respuesta.contentEquals(password)) {
+				 adivina = true;
+			 }
+		 }
+		 System.out.println("Enhorabuena! Acertaste! Ahora muere ¬¬");
+		sc.close();
+	}
+	
+	 public static void ejemploWhile2() {
+		 Scanner sc = new Scanner(System.in);
+		 String password = "1234";
+		 boolean adivina = false;
+		 int intentos = 0;
+		 while (!adivina && intentos<3) {
+			 intentos++;
+			 System.out.println("Introduzca la contraseña (Quedan " + (3-intentos) + " intentos");
+			 String respuesta = sc.nextLine();
+			 if(respuesta.equals(password)) {
+				 adivina = true;
+			 } else {
+				 System.out.println("fallaste");
+			 }
+		 }
+		 System.out.println(adivina? "Acertaste":"Gastaste todos tus intentos");
+		 
+		 sc.close();
+		}
+	 
+	public static void acaboCurso() {
+		LocalDate fecha = LocalDate.now(); // dia de hoy (23/01/2023)
+		while(fecha.isBefore(LocalDate.parse("2023-03-31"))) {
+			if(fecha.getDayOfWeek()!=DayOfWeek.SATURDAY && fecha.getDayOfWeek()!=DayOfWeek.SUNDAY) {
+			System.out.println(fecha);
+			}
+				fecha = fecha.plusDays(1);
+			}
+			System.out.println("Has acabado el curso");
+		}
+
+	public static void ejemploDoWhile2() { //Plantilla para preguntar opciones v1
+		Scanner sc = new Scanner(System.in);
+		int opcion=-1;
+		do {
+			// Impresión del menú
+			System.out.println("1. Primera opción");
+			System.out.println("2. Segunda opción");
+			System.out.println("3. Tercera opción");
+			System.out.println("4. Cuarta opción");
+			System.out.println("0. Salir");
+			// Obtención de la opción
+			opcion = sc.nextInt();
+			sc.nextLine();
+			// Tratamiento de la opción
+			switch (opcion) {
+			case 1 -> System.out.println("Has elegido la primera opción");
+			case 2 -> System.out.println("Has elegido la segunda opción");
+			case 3 -> System.out.println("Has elegido la tercera opción");
+			case 4 -> System.out.println("Has elegido la cuarta opción");
+			case 0 -> System.out.println("¡Gracias por usar nuestro programa!");
+			default -> System.out.println("La opción seleccionada no es correcta");
+			}
+		} while (opcion!=0);
+		sc.close();
+	}
+	
+	public static void offtopicBloqueTexto() { //Ejemplos de mejoras en version java 17
+		//Java 11
+		String texto = "Primera linea\n" +
+				"Segunda linea\n" +
+				"\t\tTercera linea";
+		System.out.println(texto);
+		//Java 17
+		String texto2 = """
+				El perro de san roque no tiene rabo \
+				xq a Ramon Rodriguez \
+				le escuece el ano.\
+				""";
+		System.out.println(texto2);
+	}
+	
+	public static void tiposfechasJava() { //Tipos de fechas que muestra Java
+		LocalDate fecha = LocalDate.now();
+		LocalTime hora = LocalTime.now();
+		LocalDateTime fechahora= LocalDateTime.now();
+		System.out.println(fecha);
+		System.out.println(hora);
+		System.out.println(fechahora);
+	}
+	
+	public static void ejemploFor1() {
+		for (int i=0; i<=10; i++) {
+			System.out.println("Repetición número " + (i));
+		}
+	}
+	public static void ejemploFor1b() { //Mismo pero con la variable fuera
+		int i=0;
+		for (; i<=10; i++) {
+			System.out.println("Repetición número " + (i));
+		}
+	}
+	
+	public static void ejemploFor2() { //Bucle infinito
+		for (;;) { //No hay condiciones
+			System.out.println("Repetición número");
+		}
+	}
+	public static void ejemploFor3() { //Cuenta regresiva
+		for (int i =10; i>=0; i--) { //No hay condiciones
+			System.out.println("Repetición número " + i);
+		}
+	}
+	
+	public static void ejemploForAWhile() { //Bucle for hecho con un while
+		int i=0;
+		while (i<10) {
+			System.out.println("Repetición número " +(i));
+			i++;
+		}
+	}
+	
+	public static void ejemploForAnidadosTablasMultiplicar() {
+		for (int tabla = 1; tabla <= 5; tabla++)
+				for (int num=1; num<=10; num++) {
+					System.out.println(tabla + " x " + num + " = " + (tabla*num));
+		}
+	}
 	public static void main(String[] args) {
 //		ejemploIF();
 //		ejemploIdElseIfElse();
-		ifElseIfSinElse();
+//		ifElseIfSinElse();
 //		ejemploSwitch();
 //		ejemploTernarias();
-
+//		ejemploWhile1();
+//		ejemploWhile2();
+//		acaboCurso();
+//		ejemploDoWhile2();
+//		offtopicBloqueTexto();
+//		tiposfechasJava();
+//		ejemploFor1();
+//		ejemploFor1b();
+//		ejemploFor2();
+//		ejemploFor3();
+//		ejemploForAWhile();
+		ejemploForAnidadosTablasMultiplicar();
 	}
-
 }
