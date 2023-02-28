@@ -1,0 +1,42 @@
+'use strict';
+
+console.log("HOLA QUE TAL");
+
+const pi=3.1416;
+
+let fechaNacimiento;
+
+let Y=5; //number
+y="Hola";//string
+z=true//boolean
+
+alert("HOLA");
+let numero=prompt("Dame un número");
+alert("El número escrito es: "+numero");
+
+/**1) PEDIR 2 NUMEROS AL USUARIO
+* 2) DECIDIR CUAL ES EL MAYOR DE LOS 2
+* 3) HACES TANTOS PÁRRAFOS COMO EL MAYOR DE LOS 2 Y EL TEXTO DE LOS PÁRRAFOS SE LOS PIDES AL USUARIO. */
+
+let x="Dame un numero";
+let n1=parseInt(prompt(x)); //OPCION A para convertir a int
+let n2=+prompt("Dame otro numero"); //(+) OPCION B para hacer una int
+
+let mayor;
+if(n1>n2){
+	alert(n1 + "es mayor que " +n2);
+	mayor=n1;
+}
+else if (n1<n2){
+	alert(n1 + "es menor que " + n2);
+	mayor=n2;
+}
+else {
+	alert (n1 + "es igual que " +n2);
+	mayor=n1;
+}
+let p;
+for (let i=0, i<=mayor; i++){
+	let p=promt("Dame el texto del párrafo " +i);
+	document.write("<p>+p+</p>");
+}
