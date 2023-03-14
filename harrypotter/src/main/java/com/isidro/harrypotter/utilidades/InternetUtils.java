@@ -1,4 +1,4 @@
-package com.isidro.json.utilidades;
+package com.isidro.harrypotter.utilidades;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

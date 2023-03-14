@@ -344,8 +344,8 @@ public class ejercicios4 {
 			System.out.println(Arrays.toString(meses));
 			*/
 			
-//			// ejercicio 15
-//			System.out.println(ejercicio15("27-07-1976"));
+			// ejercicio 15
+			System.out.println(ejercicio15("27-07-1976"));
 //			System.out.println(sumarTiemposCadenaFecha("27-07-1976", 5, 3, 2));
 //		}
 //			ejercicio1(3);
